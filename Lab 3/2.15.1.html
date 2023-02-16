@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<script>
+    function checkAge(age) {
+        if (age > 18) {
+            return true;
+        } else {
+            // ...
+            return confirm('Did parents allow you?');
+        }
+    }
+
+    function checkAge(age) {
+        if (age > 18) {
+            return true;
+        }
+        // ...
+        return confirm('Did parents allow you?');
+    }
+
+    // Нет разницы!
+    //
+    //     В обоих случаях return confirm('Did parents allow you?')выполняется именно тогда, когда ifусловие ложно.
+
+
+
+</script>
+
+
+
+</html>
+
+
+
+
+
+
+
+</html>
