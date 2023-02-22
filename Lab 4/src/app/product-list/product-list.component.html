@@ -1,0 +1,33 @@
+<h2>Products</h2>
+<div *ngFor="let product of products">
+  <h3>
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['https://kaspi.kz/shop/p/samsung-galaxy-a23-6-gb-128-gb-chernyi-104348541/?c=750000000#!/item', product.id]"
+    >
+      {{ product.name }}
+      <img src="{{ product.imageUrl }}" alt="phone" class="all_phones" />
+      <star-rating 
+        [value]="product.rating"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        [readonly]="true"
+      ></star-rating>
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="share()">Share</button>
+
+  <app-alert-products [product]="product" (notify)="onNotify()">
+  </app-alert-products>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
