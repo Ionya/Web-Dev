@@ -1,0 +1,35 @@
+<!-- <router-outlet></router-outlet> -->
+
+<button type="button"  (click)="showPhoneCat('phone')">
+  mobile phone
+</button>
+<button type = "button" (click)="showPhoneCat('t-shirts')">T-shirts</button>
+<button type = "button" (click)="showPhoneCat('jeans')">Jeans</button>
+<button type = "button" (click) = "showPhoneCat('accessories')">accessories</button>
+<div *ngFor="let product of products">
+  <h3>
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+    >
+      {{ product.name }}
+      <img src="{{ product.imageUrl }}" alt="phone" class="all_phones" />
+      <star-rating
+        [value]="product.rating"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        [readonly]="true"
+      ></star-rating>
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="share(product.id)">Share</button>
+
+  <app-alert-products [product]="product" (notify)="onNotify()">
+  </app-alert-products>
+</div>
+
