@@ -1,0 +1,19 @@
+
+<div *ngFor="let data of data" >
+  <a
+    [routerLink]="['/album-details', data.id]"
+    [title]="data.title + ' details'"
+
+  >
+    {{ data.title }}
+    {{data.userId}}
+    {{data.id}}
+    {{data.title}}
+
+  </a>
+
+
+
+
+<button type = "button" (click) = "showPhotos()">Photos</button>
+</div>

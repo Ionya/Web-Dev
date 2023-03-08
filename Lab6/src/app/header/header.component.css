@@ -1,0 +1,36 @@
+header{
+  text-align: justify;
+  letter-spacing: 1px;
+  height: 8em;
+  padding: 2em;
+  background-color: #33FEFF;
+  color: #FF3433;
+  border-bottom: 2px solid #FF3433;
+}
+a{
+  color: #FF3433;
+
+}
+a:hover{
+  background: #FF3433;
+  color: white;
+}
+.container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+a.logo{
+  font-weight: bold;
+  padding: 1em;
+
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+
+}
+nav ul li a{
+  padding: 1em;
+  display: inline-block;
+}

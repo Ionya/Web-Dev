@@ -1,0 +1,24 @@
+
+<div *ngFor="let data of data">
+  <h3>
+    <a
+      [routerLink]="['/album-details', data.id]"
+      [title]="data.title + ' details'"
+
+>
+      {{ data.title }}
+
+    </a>
+    <button type = "button" (click) = "delete(data.id)">delete</button>
+    <button type = "button" (click) = "update(data.id)">update</button>
+
+
+  </h3>
+
+
+
+
+</div>
+<button type = "button" (click)="createFunction()">create new album</button>
+
+
